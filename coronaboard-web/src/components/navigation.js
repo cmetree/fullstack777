@@ -102,16 +102,7 @@ export function Navigation() {
             글로벌차트
             <i />
           </Link>
-          <Link
-            className="nav-link"
-            to="korea-chart-slide"
-            offset={scrollOffset}
-            spy={true}
-            smooth={true}
-          >
-            국내차트
-            <i />
-          </Link>
+
           <Link
             className="nav-link"
             to="youtube-slide"
