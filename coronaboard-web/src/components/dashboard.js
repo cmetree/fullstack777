@@ -36,19 +36,14 @@ export function Dashboard(props) {
   const {
     confirmed,
     confirmedPrev,
-    testing,
-    testingPrev,
     death,
     deathPrev,
     released,
     releasedPrev,
-    negative,
-    negativePrev,
   } = krData;
 
   const fatality = (death / confirmed) * 100;
-  const tested = confirmed + testing + negative;
-  const testedPrev = confirmedPrev + testingPrev + negativePrev;
+
 
   return (
     <Container
@@ -103,7 +98,7 @@ export function Dashboard(props) {
         </Col>
       </Row>
 
-      <h2>대한민국</h2>
+      <h2 style={{color:'skyblue'}}><b>대한민국</b></h2>
       <Row>
         <Col xs={3} md>
           <DashboardItem
