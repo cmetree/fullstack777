@@ -59,9 +59,6 @@ function findUpdatedRows(newRowsByCc,oldRowsByCc){
         const newRow = newRowsByCc[cc];
         const oldRow = oldRowsByCc[cc];
 
-        if(cc === 'KR' && oldRow){
-            continue;
-        }
 
         if(isRowEqual(newRow,oldRow)){
             continue;
