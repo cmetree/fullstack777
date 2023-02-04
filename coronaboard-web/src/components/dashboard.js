@@ -91,7 +91,7 @@ export function Dashboard(props) {
         </Col>
         <Col xs={3} md>
           <DashboardItem
-            text="발생국"
+            text="선택 국가"
             current={worldCountry}
             prev={worldCountryPrev}
           />
