@@ -100,17 +100,17 @@ export function Dashboard(props) {
 
       <h2 style={{color:'skyblue'}}><b>대한민국</b></h2>
       <Row>
-        <Col xs={9} md>
+        <Col xs={6} md>
           <DashboardItem
             text="확진자"
             current={confirmed}
             prev={confirmedPrev}
           />
         </Col>
-        <Col xs={3} md>
+        <Col xs={6} md>
           <DashboardItem text="사망자" current={death} prev={deathPrev} />
         </Col>
-        <Col xs={9} md>
+        <Col xs={6} md>
           <DashboardItem
             text="격리해제"
             current={released}
@@ -118,7 +118,7 @@ export function Dashboard(props) {
             diffColor="green"
           />
         </Col>
-        <Col xs={3} md>
+        <Col xs={6} md>
           <DashboardItem text="치명률" current={fatality} unit="percent" />
         </Col>
 
