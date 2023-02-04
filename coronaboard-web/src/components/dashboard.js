@@ -64,21 +64,21 @@ export function Dashboard(props) {
     >
       <h2>전 세계</h2>
       <Row>
-        <Col xs={4} md>
+        <Col xs={6} md>
           <DashboardItem
             text="확진자"
             current={worldConfirmed}
             prev={worldConfirmedPrev}
           />
         </Col>
-        <Col xs={4} md>
+        <Col xs={6} md>
           <DashboardItem
             text="사망자"
             current={worldDeath}
             prev={worldDeathPrev}
           />
         </Col>
-        <Col xs={4} md>
+        <Col xs={6} md>
           <DashboardItem
             text="격리해제"
             current={worldReleased}
@@ -86,10 +86,10 @@ export function Dashboard(props) {
             diffColor="green"
           />
         </Col>
-        <Col xs={6} md>
+        <Col xs={3} md>
           <DashboardItem text="치명률" current={worldFatality} unit="percent" />
         </Col>
-        <Col xs={6} md>
+        <Col xs={3} md>
           <DashboardItem
             text="발생국"
             current={worldCountry}
@@ -100,7 +100,7 @@ export function Dashboard(props) {
 
       <h2 style={{color:'skyblue'}}><b>대한민국</b></h2>
       <Row>
-        <Col xs={3} md>
+        <Col xs={9} md>
           <DashboardItem
             text="확진자"
             current={confirmed}
@@ -110,7 +110,7 @@ export function Dashboard(props) {
         <Col xs={3} md>
           <DashboardItem text="사망자" current={death} prev={deathPrev} />
         </Col>
-        <Col xs={3} md>
+        <Col xs={9} md>
           <DashboardItem
             text="격리해제"
             current={released}
