@@ -7,7 +7,7 @@
     "hidden": false
   },
     {
-    "message": "❗ 작업은 백엔드_Node_js 프론트는 리엑트 기반의 Gatsby로 진행되며, 서버와 데이터관리는 AWS 그리고 DNS 관리는 Cloudflare를 사용합니다. ",
+    "message": "❗ 작업은 백엔드_Node_js, 프론트는 리엑트 기반의 Gatsby로 진행되며, 서버와 데이터관리는 AWS 그리고 DNS 관리는 Cloudflare를 사용합니다. ",
     "hidden": false
   }
 ]
