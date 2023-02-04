@@ -14,12 +14,13 @@ export function Notice(props) {
       <h2
         css={css`
           font-size: 20px;
+          color: red;
         `}
       >
-        [공지사항]
+        <b>[공지사항]</b>
       </h2>
       {notice.map((x, idx) => (
-        <p key={idx}>{x.message}</p>
+        <p key={idx} style={{color:'blue'}}>{x.message}</p>
       ))}
     </div>
   );
