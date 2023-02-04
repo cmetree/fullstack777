@@ -2,7 +2,7 @@ const { subDays } = require('date-fns');
 const { format, utcToZonedTime } = require('date-fns-tz');
 const _ = require('lodash');
 
-const countryInfo = require('../../tools/downloaded/countryInfo.json');
+const countryInfo = require('../../tools/downloaded2/countryInfo.json');
 const ApiClient = require('./api-client');
 const notice = require('../../tools/downloaded2/notice.json');
 
