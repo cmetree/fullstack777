@@ -3,11 +3,11 @@
     "message": "❗ 통계분석 및 자동화 연습을 위해, 코로나보드.kr 홈페이지를 다시 구현해 보았습니다."
   },
   {
-    "message": "❗ 국내 정보는 질병관리청, 해외 정보는 worldometer에서 15분마다 크롤링 되며, 30분마다 사이트는 빌드 됩니다.",
+    "message": "❗ 통계정보는 worldometer에서 15분마다 크롤링 되며, 30분마다 사이트는 빌드 됩니다.",
     "hidden": false
   },
     {
-    "message": "❗ 작업은 백엔드_Node_js, 프론트는 리엑트 기반의 Gatsby로 진행되며, 서버와 데이터관리는 AWS 그리고 DNS 관리는 Cloudflare를 사용합니다. ",
+    "message": "❗ 백엔드_Node_js, 프론트는 리엑트 기반의 Gatsby로 진행했으며, 서버와 데이터관리는 AWS 그리고 DNS 관리는 Cloudflare를 사용했습니다. ",
     "hidden": false
   }
 ]
