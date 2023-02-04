@@ -17,7 +17,7 @@ export function Notice(props) {
           color: red;
         `}
       >
-        <b>[공지사항]</b>
+        <b>[안내 사항]</b>
       </h2>
       {notice.map((x, idx) => (
         <p key={idx} style={{color:'blue'}}>{x.message}</p>
