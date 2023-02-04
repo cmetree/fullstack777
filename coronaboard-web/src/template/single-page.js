@@ -5,7 +5,6 @@ import { Dashboard } from '../components/dashboard';
 import { Notice } from '../components/notice';
 import { GlobalSlide } from '../components/global-slide';
 import { GlobalChartSlide } from '../components/global-chart-slide';
-import { KoreaChartSlide } from '../components/korea-chart-slide';
 import { YoutubeSlide } from '../components/youtube-slide';
 
 import { Navigation } from '../components/navigation';
@@ -52,7 +51,7 @@ export default function SinglePage({ pageContext }) {
       <Navigation />
       <GlobalSlide id="global-slide" dataSource={dataSource} />
       <GlobalChartSlide id="global-chart-slide" dataSource={dataSource}/>
-      <KoreaChartSlide id="korea-chart-slide" dataSource={dataSource}/>
+
       <YoutubeSlide id="youtube-slide" dataSource={dataSource}/>
 
     </div>
