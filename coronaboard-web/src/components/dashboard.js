@@ -126,20 +126,7 @@ export function Dashboard(props) {
         <Col xs={3} md>
           <DashboardItem text="치명률" current={fatality} unit="percent" />
         </Col>
-        <Col xs={4} md>
-          <DashboardItem text="총검사자" current={tested} prev={testedPrev} />
-        </Col>
-        <Col xs={4} md>
-          <DashboardItem text="검사중" current={testing} prev={testingPrev} />
-        </Col>
-        <Col xs={4} md>
-          <DashboardItem
-            text="결과음성"
-            current={negative}
-            prev={negativePrev}
-            diffColor="green"
-          />
-        </Col>
+
       </Row>
     </Container>
   );
