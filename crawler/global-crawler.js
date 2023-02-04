@@ -19,7 +19,7 @@ class GlobalCrawler{
     }
 
     async crawlstat(){
-        const url = 'https://yjiq150.github.io/coronaboard-crawling-sample/clone/worldometer/';
+        const url = 'https://www.worldometers.info/coronavirus/';
         const resp = await this.client.get(url);
         const $ = cheerio.load(resp.data);
 
