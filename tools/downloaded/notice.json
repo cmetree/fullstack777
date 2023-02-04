@@ -4,10 +4,10 @@
   },
   {
     "message": "❗ 국내 정보는 질병관리청, 해외 정보는 worldometer에서 15분마다 크롤링 되면, 30분마다 사이트는 빌드 됩니다.",
-    "hidden": False
+    "hidden": false
   },
     {
     "message": "❗ 작업은 백엔드_Node_js 프론트는 리엑트 기반의 Gatsby로 진행되며, 서버와 데이터관리는 AWS 그리고 DNS 관리는 Cloudflare를 사용합니다. ",
-    "hidden": False
+    "hidden": false
   }
 ]
