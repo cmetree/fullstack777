@@ -4,7 +4,7 @@ const _ = require('lodash');
 
 const countryInfo = require('../../tools/downloaded/countryInfo.json');
 const ApiClient = require('./api-client');
-const notice = require('../../tools/downloaded/notice.json');
+const notice = require('../../tools/downloaded2/notice.json');
 
 const path = require('path');
 const fs = require('fs-extra');
