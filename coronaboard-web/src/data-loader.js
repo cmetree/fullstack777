@@ -2,14 +2,14 @@ const { subDays } = require('date-fns');
 const { format, utcToZonedTime } = require('date-fns-tz');
 const _ = require('lodash');
 
-const countryInfo = require('../../tools/downloaded2/countryInfo.json');
+const countryInfo = require('../../tools/downloaded/countryInfo.json');
 const ApiClient = require('./api-client');
-const notice = require('../../tools/downloaded2/notice.json');
+const notice = require('../../tools/downloaded/notice.json');
 
 const path = require('path');
 const fs = require('fs-extra');
-const { getYouTubeVideosByKeyword } = require('./youtube');
 
+const { getYouTubeVideosByKeyword } = require('./youtube');
 
 async function getDataSource() {
   const countryByCc = _.keyBy(countryInfo, 'cc');
@@ -34,11 +34,11 @@ async function getDataSource() {
 
   const koreaTestChartData = generateKoreaTestChartData(allGlobalStats);
 
-  const youtubeVideos = await getYouTubeVideosByKeyword('코로나19');
-
-    // 7장에서 수집해서 저장해둔 연령대별, 성별 통계를 로드
+  // 7장에서 수집해서 저장해둔 연령대별, 성별 통계를 로드
   const { byAge, bySex } = await apiClient.getByAgeAndBySex();
 
+  // 유튜브 API를 이용하여 코로나19 관련 영상 정보를 로드
+  const youtubeVideos = await getYouTubeVideosByKeyword('코로나19');
 
   return {
     lastUpdated: Date.now(),
@@ -49,7 +49,6 @@ async function getDataSource() {
     koreaBySexChartData: bySex,
     koreaByAgeChartData: byAge,
     youtubeVideos,
-
   };
 }
 
@@ -64,7 +63,6 @@ function generateKoreaTestChartData(allGlobalStats) {
     testing: krData.map((x) => x.testing),
   };
 }
-
 
 function generateGlobalStats(groupedByDate) {
   // const now = new Date();
