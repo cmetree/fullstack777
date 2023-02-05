@@ -25,6 +25,10 @@
   {
     "message": "❗ 백엔드는 Node.js, 프론트는 Gatsby로 진행했습니다. 서버와 데이터관리는 AWS,SQL,구글시트를 이용하며, DNS 관리는 Cloudflare를 사용합니다. ",
     "hidden": false
+  },
+  {
+    "message": "❗ 백엔드는 Node.js, 프론트는 Gatsby로 진행했습니다. 서버와 데이터관리는 AWS,SQL,구글시트를 이용하며, DNS 관리는 Cloudflare를 사용합니다. ",
+    "hidden": false
   }
 ]
 
