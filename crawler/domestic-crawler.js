@@ -6,62 +6,28 @@ class DomesticCrawler {
   constructor() {
     this.client = axios.create({
       headers: {
+        // 실제 크롬 웹브라우저에서 보내는 값과 동일하게 넣기
         'User-Agent':
-        'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36'
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
       },
     });
   }
 
   async crawlStat() {
-    const url = 'https://yjiq150.github.io/coronaboard-crawling-sample/clone/ncov/';
+    // 공식 사이트 '발생동향 > 국내 발생 현황' 페이지의 주소
+    // http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=
+    // 클론 사이트 주소
+    const url = 'https://ncov.kdca.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=';
     const resp = await this.client.get(url);
     const $ = cheerio.load(resp.data);
 
     return {
-      basicStats: this._extractBasicStats($),
       byAge: this._extractByAge($),
       bySex: this._extractBySex($),
     };
   }
 
-  _extractBasicStats($)  {
-    let result = null;
-    const titles = $('h5.s_title_in3');
-    titles.each((i, el) => {
-      const titleTextEl = $(el)
-        .contents()
-        .toArray()
-        .filter((x) => x.type === 'text');
-
-      if ($(titleTextEl).text().trim() === '누적 검사현황') {
-        const tableEl = $(el).next();
-        if (!tableEl) {
-          throw new Error('table not found');
-        }
-        const cellEls = tableEl.find('tbody tr td');
-
-        const values = cellEls
-          .toArray()
-          .map((node) => this._normalize($(node).text()));
-
-        result = {
-          confirmed: values[3],
-          released: values[1],
-          death: values[2],
-          tested: values[5],
-          testing: values[6],
-          negative: values[4],
-        };
-      }
-    });
-
-    if (result == null ){
-     throw new Error('Data not found');
-    }
-
-    return result;
-  }
-
+    
 
   _extractByAge($) {
     const mapping = {
@@ -79,14 +45,13 @@ class DomesticCrawler {
     return this._extractDataWithMapping(mapping, $);
   }
 
-
   _extractBySex($) {
     const mapping = {
-     남성: 'male',
-     여성: 'female',
+      남성: 'male',
+      여성: 'female',
     };
 
-    return this._extractDataWithMapping(mapping, $); 
+    return this._extractDataWithMapping(mapping, $);
   }
 
   _extractDataWithMapping(mapping, $) {
@@ -100,8 +65,8 @@ class DomesticCrawler {
           _.forEach(mapping, (fieldName, firstColumnText) => {
             if ($(cols.get(0)).text() === firstColumnText) {
               result[fieldName] = {
-               confirmed: this._normalize($(cols.get(1)).text()),
-               death: this._normalize($(cols.get(2)).text()),     
+                confirmed: this._normalize($(cols.get(1)).text()),
+                death: this._normalize($(cols.get(2)).text()),
               };
             }
           });
@@ -112,16 +77,17 @@ class DomesticCrawler {
       throw new Error('data not found');
     }
 
-   return result;
+    return result;
   }
 
-
-
   _normalize(numberText) {
-   const matches = /[0-9,]+/.exec(numberText);
-   const absValue = matches[0];
-   return parseInt(absValue.replace(/[\s,]*/g, ''));
+    // 아래 형태로 들어올 때 괄호 없는 앞쪽 숫자만 추출
+    // ex) 8,757 (45.14)
+    const matches = /[0-9,]+/.exec(numberText);
+    const absValue = matches[0];
+    return parseInt(absValue.replace(/[\s,]*/g, ''));
   }
 }
 
 module.exports = DomesticCrawler;
+
