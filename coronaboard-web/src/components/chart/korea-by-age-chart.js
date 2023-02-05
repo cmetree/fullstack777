@@ -38,6 +38,7 @@ function generateChartOption(data, dataType) {
           const percent = ((obj.value / total) * 100).toFixed(1);
           return `${percent}%`;
         },
+        rotate:-10
       },
       data: ageChartData,
     },
