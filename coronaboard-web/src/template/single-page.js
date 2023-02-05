@@ -38,9 +38,9 @@ export default function SinglePage({ pageContext }) {
           font-size: 28px;
         `}
       >
-        코로나19(COVID-19)
+        (COVID-19)코로나 19
         <br />
-        실시간 상황판
+        한눈에 알아보기
       </h1>
       <p className="text-center text-white">
         마지막 업데이트: {lastUpdatedFormatted}
