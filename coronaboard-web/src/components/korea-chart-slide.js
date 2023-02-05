@@ -1,14 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { Slide } from './slide';
-import { KoreaTestChart } from './chart/korea-test-chart';
 import { KoreaBySexChart } from './chart/korea-by-sex-chart';
 import { KoreaByAgeChart } from './chart/korea-by-age-chart';
 
 export function KoreaChartSlide(props) {
   const { id, dataSource } = props;
   const {
-    koreaTestChartData,
     koreaBySexChartData,
     koreaByAgeChartData,
   } = dataSource;
@@ -22,7 +20,6 @@ export function KoreaChartSlide(props) {
           }
         `}
       >
-        <KoreaTestChart koreaTestChartData={koreaTestChartData} />
         <KoreaBySexChart koreaBySexChartData={koreaBySexChartData} />
         <KoreaByAgeChart koreaByAgeChartData={koreaByAgeChartData} />
       </div>
