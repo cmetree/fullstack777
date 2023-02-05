@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { css } from '@emotion/react';
 import { Dashboard } from '../components/dashboard';
 import { Notice } from '../components/notice';
+import { Navigation } from '../components/navigation';
 import { GlobalSlide } from '../components/global-slide';
 import { GlobalChartSlide } from '../components/global-chart-slide';
-import { YoutubeSlide } from '../components/youtube-slide';
-import { Navigation } from '../components/navigation';
+import { KoreaChartSlide } from '../components/korea-chart-slide';
 import { Footer } from '../components/footer';
-
+import { YoutubeSlide } from '../components/youtube-slide';
 
 export default function SinglePage({ pageContext }) {
   const { dataSource } = pageContext;
   const { lastUpdated, globalStats, notice } = dataSource;
+  // 사용자의 언어/지역 설정에 맞는 날짜 형태로 표시
   const lastUpdatedFormatted = new Date(lastUpdated).toLocaleString();
 
-
+  useEffect(() => {
+    if (window) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  });
 
   return (
     <div id="top">
@@ -47,14 +52,34 @@ export default function SinglePage({ pageContext }) {
       </p>
 
       <Dashboard globalStats={globalStats} />
-      <Notice notice={notice}/>
+      <Notice notice={notice} />
+
+      <div
+        css={css`
+          text-align: center;
+        `}
+      >
+        {/* square01 */}
+        <ins
+          className="adsbygoogle"
+          style={{ display: 'block' }}
+          data-ad-client="ca-pub-1511546096943469"
+          data-ad-slot="8032452972"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
+
       <Navigation />
+
+      {/* 각 슬라이드에 지정된 id 값은 Navigation 컴포넌트 안의 Link에 지정된 to 값과 동일해야함 */}
       <GlobalSlide id="global-slide" dataSource={dataSource} />
-      <GlobalChartSlide id="global-chart-slide" dataSource={dataSource}/>
 
-      <YoutubeSlide id="youtube-slide" dataSource={dataSource}/>
+      <GlobalChartSlide id="global-chart-slide" dataSource={dataSource} />
+      <KoreaChartSlide id="korea-chart-slide" dataSource={dataSource} />
+      <YoutubeSlide id="youtube-slide" dataSource={dataSource} />
+
       <Footer />
-
     </div>
   );
 }
