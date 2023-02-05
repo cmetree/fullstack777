@@ -6,8 +6,8 @@ import { Notice } from '../components/notice';
 import { GlobalSlide } from '../components/global-slide';
 import { GlobalChartSlide } from '../components/global-chart-slide';
 import { YoutubeSlide } from '../components/youtube-slide';
-
 import { Navigation } from '../components/navigation';
+import { Footer } from '../components/footer';
 
 
 export default function SinglePage({ pageContext }) {
@@ -53,6 +53,7 @@ export default function SinglePage({ pageContext }) {
       <GlobalChartSlide id="global-chart-slide" dataSource={dataSource}/>
 
       <YoutubeSlide id="youtube-slide" dataSource={dataSource}/>
+      <Footer />
 
     </div>
   );
