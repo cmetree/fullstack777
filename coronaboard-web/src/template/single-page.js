@@ -9,6 +9,7 @@ import { GlobalChartSlide } from '../components/global-chart-slide';
 import { KoreaChartSlide } from '../components/korea-chart-slide';
 import { Footer } from '../components/footer';
 import { YoutubeSlide } from '../components/youtube-slide';
+import HelmetWrapper from '../components/helmet-wrapper';
 
 export default function SinglePage({ pageContext }) {
   const { dataSource } = pageContext;
@@ -24,6 +25,8 @@ export default function SinglePage({ pageContext }) {
 
   return (
     <div id="top">
+    
+      <HelmetWrapper title={"홈"}/>
 
       <div
         css={css`
