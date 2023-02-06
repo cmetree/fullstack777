@@ -11,8 +11,6 @@ function HelmetWrapper({ title, description }) {
           siteMetadata {
             title
             description
-            image
-            siteUrl
           }
         }
       }
