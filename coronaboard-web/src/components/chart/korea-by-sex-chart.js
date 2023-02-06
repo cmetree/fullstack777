@@ -41,7 +41,7 @@ function generateChartOption(data, dataType) {
     animation: true,
     title: {
       text: '대한민국 성별 확진자 현황',
-      subtext: `총 ${textByDataType[dataType]} 수 ${numberWithCommas(total)}명 \n based on 질병관리청`,
+      subtext: `총 ${textByDataType[dataType]} 수 ${numberWithCommas(total)}명 \n Based on 질병관리청`,
       left: 'center',
     },
     legend: {
