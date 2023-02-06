@@ -39,14 +39,7 @@ function HelmetWrapper({ title, description }) {
           property: 'og:description',
           content: metaDescription,
         },
-        {
-          property: 'og:url',
-          content: siteMetadata.siteUrl,
-        },
-        {
-          property: 'og:image',
-          content: siteMetadata.image,
-        },
+
         {
           property: 'og:type',
           content: 'website',
