@@ -72,7 +72,7 @@ function generateChartOption(data, dataType) {
   return {
     animation: false,
     title: {
-      text: '전세계 코로나(COVID-19) 추이',
+      text: '전세계 코로나(COVID-19) 추이\n\n Based on WorldOmeters',
       left: 'center',
     },
     // 차트 위로 마우스 오버 했을때 커서가 위치한 축 상에 위치한 모든 데이터의 값을 보여줌
