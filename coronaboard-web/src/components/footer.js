@@ -16,7 +16,7 @@ export function Footer() {
           padding: 36px 0;
         `}
       >
-        <b>❤️2023년 다 잘 되실 겁니다.❤️ <br/>Copied by WhoCdin<br/>Contact Info_whocdin@gmail.com</b>
+        <b>❤️2023년 다 잘 되실 겁니다.❤️ <br/>Copied by WhoCdin(Shim Gyu Tae)<br/>Contact Info_whocdin@gmail.com</b>
       </Container>
     </div>
   ); 
