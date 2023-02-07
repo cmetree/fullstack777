@@ -78,10 +78,11 @@ export default function SinglePage({ pageContext }) {
       {/* 각 슬라이드에 지정된 id 값은 Navigation 컴포넌트 안의 Link에 지정된 to 값과 동일해야함 */}
       <GlobalSlide id="global-slide" dataSource={dataSource} />
 
-      <iframe src="https://ads-partners.coupang.com/widgets.html?id=637932&template=carousel&trackingCode=AF0322893&subId=&width=100%&height=200"
+      <iframe src="https://ads-partners.coupang.com/widgets.html?id=637932&template=carousel&trackingCode=AF0322893&subId=&width=100%25&height=200"
        width="100%" 
        height="200" 
-       frameborder="0" scrolling="no" 
+       frameborder="0" 
+       scrolling="no" 
        referrerpolicy="unsafe-url"
        ></iframe>
 
