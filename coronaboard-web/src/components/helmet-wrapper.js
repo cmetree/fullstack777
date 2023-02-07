@@ -51,12 +51,15 @@ function HelmetWrapper({ title, description }) {
           property: 'og:type',
           content: 'website',
         },
-
       ]}
-    />
+    >
+      <script
+        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6944089488427159"
+        crossorigin="anonymous"
+      ></script>
+    </Helmet>
   );
 }
-
 
 HelmetWrapper.defaultProps = {
   description: null,
