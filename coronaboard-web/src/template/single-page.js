@@ -26,7 +26,7 @@ export default function SinglePage({ pageContext }) {
   return (
     <div id="top">
 
-      <HelmetWrapper title={"홈"}/>
+      <HelmetWrapper title={"Home"}/>
 
       <div
         css={css`
