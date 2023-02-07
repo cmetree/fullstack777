@@ -25,7 +25,7 @@ export default function SinglePage({ pageContext }) {
 
   return (
     <div id="top">
-    
+
       <HelmetWrapper title={"홈"}/>
 
       <div
@@ -46,9 +46,9 @@ export default function SinglePage({ pageContext }) {
           font-size: 28px;
         `}
       >
-        (COVID-19)코로나 19
+        코로나19(COVID-19)
         <br />
-        한눈에 알아보기
+        실시간 상황판
       </h1>
       <p className="text-center text-white">
         마지막 업데이트: {lastUpdatedFormatted}
@@ -66,8 +66,8 @@ export default function SinglePage({ pageContext }) {
         <ins
           className="adsbygoogle"
           style={{ display: 'block' }}
-          data-ad-client="ca-pub-1511546096943469"
-          data-ad-slot="8032452972"
+          data-ad-client="ca-pub-6944089488427159"
+          data-ad-slot="3754143645"
           data-ad-format="auto"
           data-full-width-responsive="true"
         ></ins>
