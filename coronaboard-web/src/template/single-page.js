@@ -62,15 +62,13 @@ export default function SinglePage({ pageContext }) {
           text-align: center;
         `}
       >
-        {/* square01 */}
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-6944089488427159"
-          data-ad-slot="3754143645"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+        
+        <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-6944089488427159"
+            data-ad-slot="4786796354"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
       </div>
 
       <Navigation />
