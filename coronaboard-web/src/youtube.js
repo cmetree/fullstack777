@@ -5,7 +5,7 @@ TimeAgo.addLocale(ko);
 const timeAgoKorean = new TimeAgo('ko-KR');
 
 // 구글 클라우드 콘솔을 통해 발급받은 API 키
-const apiKey = 'AIzaSyAqwVs4DQWSxdcbsUo8JlO1sPb0MNVksGo';
+const apiKey = 'AIzaSyAcpiEmXMNdrGwdCJO71TjNK3NIV7PoK9Y';
 
 function truncateText(text, maxLength) {
   if (!text) {
